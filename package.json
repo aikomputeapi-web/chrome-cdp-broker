@@ -1,0 +1,27 @@
+{
+  "name": "chrome-cdp-broker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Single shared, self-healing Chrome CDP endpoint for every browser agent on this machine (pi chrome_* tools, browser_execute, nodriver, custom CDP scripts).",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "bin": {
+    "chrome-cdp": "./bin/chrome-cdp.mjs"
+  },
+  "exports": {
+    ".": "./src/index.mjs"
+  },
+  "scripts": {
+    "test": "node tests/run.mjs",
+    "ensure": "node bin/chrome-cdp.mjs ensure",
+    "doctor": "node bin/chrome-cdp.mjs doctor"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "README.md"
+  ],
+  "license": "MIT"
+}
